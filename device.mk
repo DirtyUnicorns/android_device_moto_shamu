@@ -228,6 +228,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     telephony.lteOnCdmaDevice=1
 
+# Allow carrier tethering
+PRODUCT_PROPERTY_OVERRIDES += \
+net.tethering.noprovisioning=true
+
 # SIM based FSG loading default enabled
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.fsg_reload_on=1 \
