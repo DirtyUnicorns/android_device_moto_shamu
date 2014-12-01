@@ -31,7 +31,7 @@ PRODUCT_NAME := du_shamu
 PRODUCT_DEVICE := shamu
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6
-PRODUCT_MANUFACTURER := moto
+PRODUCT_MANUFACTURER := motorola
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 $(call inherit-product, device/moto/shamu/device.mk)
