@@ -136,6 +136,9 @@ DEVICE_MATRIX_FILE := device/moto/shamu/compatibility_matrix.xml
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Qualcomm Time Services
+BOARD_USES_QC_TIME_SERVICES := true
+
 TARGET_FS_CONFIG_GEN += device/moto/shamu/config.fs
 
 # Enable workaround for slow rom flash
