@@ -132,6 +132,9 @@ USE_DEVICE_SPECIFIC_CAMERA:= true
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 
+# Qualcomm Time Services
+BOARD_USES_QC_TIME_SERVICES := true
+
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
