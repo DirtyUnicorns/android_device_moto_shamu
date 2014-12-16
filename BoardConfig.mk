@@ -167,6 +167,9 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 
 #TARGET_TOUCHBOOST_FREQUENCY := 1500
 
+# Time
+BOARD_USES_QC_TIME_SERVICES := true
+
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
