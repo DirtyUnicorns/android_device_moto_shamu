@@ -131,6 +131,9 @@ USE_CLANG_PLATFORM_BUILD := true
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Qualcomm Time Services
+BOARD_USES_QC_TIME_SERVICES := true
+
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
 
