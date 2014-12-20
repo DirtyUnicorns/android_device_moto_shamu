@@ -23,13 +23,14 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_NO_BOOTLOADER := true
 
+# Kernel Specifications
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=shamu msm_rtb.filter=0x37 ehci-hcd.park=3 utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags utags.backup=/dev/block/platform/msm_sdcc.1/by-name/utagsBackup coherent_pool=8M
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.selinux=permissive androidboot.hardware=shamu msm_rtb.filter=0x37 ehci-hcd.park=3 utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags utags.backup=/dev/block/platform/msm_sdcc.1/by-name/utagsBackup coherent_pool=8M
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset BOARD_RAMDISK_OFFSET --tags_offset BOARD_KERNEL_TAGS_OFFSET
 
@@ -45,9 +46,11 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 BOARD_EGL_CFG := device/moto/shamu/egl.cfg
 
+# Audio
 BOARD_USES_ALSA_AUDIO := true
+BOARD_HAS_AUDIO_DSP := true
 
-# Wifi related defines
+# WiFi
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 BOARD_WLAN_DEVICE           := bcmdhd
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -60,7 +63,7 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_BUS := PCIE
 #BOARD_USES_SECURE_SERVICES := true
 
-#Bluetooth defines
+# Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/shamu/bluetooth
 
@@ -85,7 +88,7 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-TARGET_TOUCHBOOST_FREQUENCY := 1500
+# Partition Sizes and Configuration
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16793600
@@ -105,6 +108,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/moto/shamu
 # Support Native Layer RF cutback
 BOARD_USES_CUTBACK_IN_RILD := true
 
+# Sepolicy Configuration
 BOARD_SEPOLICY_DIRS += \
        device/moto/shamu/sepolicy
 
@@ -146,18 +150,22 @@ BOARD_SEPOLICY_UNION += \
         genfs_contexts \
         service_contexts
 
-HAVE_ADRENO_SOURCE:= false
 
+
+# Display
+HAVE_ADRENO_SOURCE:= false
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
+# GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
-BOARD_HAS_AUDIO_DSP := true
-
+# Camera
 USE_DEVICE_SPECIFIC_CAMERA:= true
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
+
+TARGET_TOUCHBOOST_FREQUENCY := 1500
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
