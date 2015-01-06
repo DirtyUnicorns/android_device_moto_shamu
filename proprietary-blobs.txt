@@ -88,6 +88,7 @@
 /system/etc/Handset_cal.acdb
 /system/etc/Hdmi_cal.acdb
 /system/etc/Headset_cal.acdb
+/system/etc/permissions/com.motorola.triggerenroll.xml
 /system/etc/permissions/org.simalliance.openmobileapi.xml
 /system/etc/qmi_fw.conf
 /system/etc/sap.conf
