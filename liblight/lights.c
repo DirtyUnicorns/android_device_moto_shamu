@@ -176,7 +176,7 @@ set_speaker_light_locked_notification(struct light_device_t* dev,
     write_int (GREEN_LED_FILE, green);
     write_int (BLUE_LED_FILE, blue);
   } else {
-    // battery light is active. Be careful not 
+    // battery light is active. Be careful not
     // to turn it off
     int bcolor = get_battery_color(bstate);
     if (bcolor != LED_RED) {
@@ -184,7 +184,7 @@ set_speaker_light_locked_notification(struct light_device_t* dev,
     }
     if (bcolor != LED_GREEN) {
       write_int (GREEN_LED_FILE, green);
-    }    
+    }
     if (bcolor != LED_BLUE) {
       write_int (BLUE_LED_FILE, blue);
     }
@@ -245,18 +245,18 @@ set_speaker_light_locked_battery(struct light_device_t* dev,
           ALOGE("set_led_state (dual) unexpected color: bcolorRGB=%08x\n", bcolor);
       }
   } else {
-      // device is not charging. clear all states
-      // preserving any notification lights
-      if(n_red == LED_BLANK) {
-        write_int (RED_LED_FILE, LED_BLANK);
-      }
-      if(n_green == LED_BLANK) {
-        write_int (GREEN_LED_FILE, LED_BLANK);
-      }
-      if(n_blue == LED_BLANK) {
-        write_int (BLUE_LED_FILE, LED_BLANK);
-      }
-   }
+    // device is not charging. clear all states
+    // preserving any notification lights
+    if(n_red == LED_BLANK) {
+      write_int (RED_LED_FILE, LED_BLANK);
+    }
+    if(n_green == LED_BLANK) {
+      write_int (GREEN_LED_FILE, LED_BLANK);
+    }
+    if(n_blue == LED_BLANK) {
+      write_int (BLUE_LED_FILE, LED_BLANK);
+    }
+  }
 }
 
 static int
