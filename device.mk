@@ -492,3 +492,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # ro.product.first_api_level indicates the first api level the device has commercially launched on.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21
+
+# miracast props
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1﻿
