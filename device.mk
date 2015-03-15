@@ -402,6 +402,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=false
 
+# Set missing telephony props
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.sib16_support=1
+
 # OEM Unlock reporting
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.oem_unlock_supported=1
