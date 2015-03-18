@@ -231,6 +231,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_no_toggle=1 \
     persist.radio.sib16_support=1
 
+# Rich Communications Service is disabled in 5.1
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rcs.supported=0
+
 #Reduce IMS logging
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ims.disableDebugLogs=1 \
