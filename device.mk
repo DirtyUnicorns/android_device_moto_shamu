@@ -485,6 +485,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=false
 
+# Rich Communications Service is disabled
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rcs.supported=0
+
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
