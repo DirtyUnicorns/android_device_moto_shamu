@@ -402,6 +402,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=false
 
+# Rich Communications Service is disabled
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rcs.supported=0
+
 # Set missing telephony props
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.sib16_support=1
