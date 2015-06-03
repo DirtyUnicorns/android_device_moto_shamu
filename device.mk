@@ -226,6 +226,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.alt_mbn_name=tmo_alt.mbn \
     ro.com.android.prov_mobiledata=false
 
+# never dexopt the MotoSignature
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
+
 #Reduce IMS logging
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ims.disableDebugLogs=1 \
