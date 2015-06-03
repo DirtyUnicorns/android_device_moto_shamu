@@ -235,6 +235,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_no_toggle=1 \
     persist.radio.sib16_support=1
 
+# never dexopt the MotoSignature
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
+
 # WiFi calling
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
