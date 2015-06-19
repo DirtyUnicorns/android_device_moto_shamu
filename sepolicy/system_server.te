@@ -7,6 +7,7 @@ unix_socket_send(system_server, mpdecision, mpdecision)
 
 unix_socket_connect(system_server, sensors, sensors)
 allow system_server sensors_socket:sock_file r_file_perms;
+allow system_server sensors_device:chr_file rw_file_perms;
 
 # whitelist qualcomm specific ioctls
 allow system_server self:socket ioctl;
