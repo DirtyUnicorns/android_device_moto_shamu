@@ -187,4 +187,12 @@ EXTENDED_FONT_FOOTPRINT := true
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+# TWRP
+TW_THEME := portrait_hdpi
+TW_INCLUDE_L_CRYPTO := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_SCREEN_BLANK_ON_BOOT := true
+
 -include vendor/moto/shamu/BoardConfigVendor.mk
