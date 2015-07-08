@@ -190,6 +190,9 @@ EXTENDED_FONT_FOOTPRINT := true
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+# Prebuilt Chromium
+USE_PREBUILT_CHROMIUM := true
+
 # TWRP
 TW_THEME := portrait_hdpi
 TW_INCLUDE_L_CRYPTO := true
