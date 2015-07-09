@@ -1,6 +1,6 @@
 [
  {
-   "repository":  "DirtyUnicorns/android_kernel_moto_shamu",
+   "repository":  "android_kernel_moto_shamu",
    "target_path": "kernel/moto/shamu",
    "branch":      "lollipop"
  }
