@@ -97,6 +97,7 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # Partition Sizes and Configuration
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16793600
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
@@ -163,7 +164,6 @@ BOARD_SEPOLICY_UNION += \
         file_contexts \
         genfs_contexts \
         service_contexts
-
 
 
 # Display
