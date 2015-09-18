@@ -33,8 +33,8 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-BUILD_FINGERPRINT=google/shamu/shamu:5.1.1/LYZ28E/1914015:user/release-keys \
-PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28E 1914015 release-keys"
+BUILD_FINGERPRINT=google/shamu/shamu:5.1.1/LYZ28K/2168912:user/release-keys \
+PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28K 2168912 release-keys"
 
 $(call inherit-product, device/moto/shamu/device.mk)
 $(call inherit-product-if-exists, vendor/motorola/shamu/shamu-vendor.mk)
