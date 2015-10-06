@@ -1,0 +1,8 @@
+[
+ {
+   "remote": "du",
+   "repository": "android_kernel_moto_shamu",
+   "target_path": "kernel/moto/shamu",
+   "revision": "lollipop"
+ }
+]
