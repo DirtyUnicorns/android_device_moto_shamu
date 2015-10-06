@@ -37,4 +37,4 @@ BUILD_FINGERPRINT=google/shamu/shamu:5.1.1/LYZ28K/2168912:user/release-keys \
 PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28K 2168912 release-keys"
 
 $(call inherit-product, device/moto/shamu/device.mk)
-$(call inherit-product-if-exists, vendor/motorola/shamu/shamu-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/shamu/device-vendor.mk)
