@@ -41,14 +41,15 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>9</item>
-        <item>30</item>
+        <item>1</item>
+        <item>40</item>
         <item>100</item>
         <item>325</item>
+        <item>600</item>
         <item>1250</item>
-        <item>3500</item>
+        <item>2200</item>
+        <item>4000</item>
         <item>10000</item>
-        <item>20000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -56,15 +57,16 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <!--     9 --> <item>18</item>
-        <!--    30 --> <item>30</item>
-        <!--   100 --> <item>59</item>
-        <!--   325 --> <item>74</item>
-        <!--  1250 --> <item>92</item>
-        <!--  3500 --> <item>118</item>
-        <!-- 10000 --> <item>155</item>
-        <!-- 20000 --> <item>222</item>
-                       <item>255</item>
+        <item>11</item>   <!-- 0-1 -->
+        <item>22</item>   <!-- 1-40 -->
+        <item>47</item>   <!-- 40-100 -->
+        <item>61</item>   <!-- 100-325 -->
+        <item>84</item>   <!-- 325-600 -->
+        <item>107</item>  <!-- 600-1250 -->
+        <item>154</item>  <!-- 1250-2200 -->
+        <item>212</item>  <!-- 2200-4000 -->
+        <item>245</item>  <!-- 4000-10000 -->
+        <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -84,19 +86,21 @@
         <item>0</item>
     </integer-array>
 
-    <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">10</integer>
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDim">6</integer>
 
     <!-- Screen brightness when dozing. -->
     <integer name="config_screenBrightnessDoze">10</integer>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">82</integer>
+    <integer name="config_screenBrightnessSettingDefault">62</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">10</integer>
+    <integer name="config_screenBrightnessSettingMinimum">2</integer>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
