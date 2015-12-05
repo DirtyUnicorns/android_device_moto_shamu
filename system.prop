@@ -73,6 +73,7 @@ persist.rcs.supported=0
 # Telephony
 ro.telephony.default_network=10
 ro.telephony.default_cdma_sub=0
+ro.telephony.get_imsi_from_sim=true
 telephony.lteOnCdmaDevice=1
 
 # Tethering
