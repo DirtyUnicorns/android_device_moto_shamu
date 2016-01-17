@@ -25,9 +25,6 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
-    # Load persistent dm-verity state
-    verity_load_state
-
     mkdir /oem 0550 root root
 
     # Set permissions for persist partition
@@ -64,9 +61,6 @@ on fs
 
     # Adjust parameters for dm-verity device
     write /sys/block/dm-0/queue/read_ahead_kb 2048
-
-    # Update dm-verity state and set partition.*.verified properties
-    verity_update_state
 
 on post-fs-data
     mkdir /tombstones/modem 0771 system system
