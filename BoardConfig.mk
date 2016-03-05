@@ -136,4 +136,6 @@ EXTENDED_FONT_FOOTPRINT := true
 
 USE_CLANG_PLATFORM_BUILD := true
 
+TARGET_FS_CONFIG_GEN += device/moto/shamu/config.fs
+
 -include vendor/moto/shamu/BoardConfigVendor.mk
