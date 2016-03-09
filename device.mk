@@ -38,17 +38,20 @@ PRODUCT_COPY_FILES += \
 	device/moto/shamu/atmel_mxt_ts.idc:system/usr/idc/atmel_mxt_ts.idc
 
 PRODUCT_COPY_FILES += \
-    device/moto/shamu/audio_policy.conf:system/etc/audio_policy.conf \
-    device/moto/shamu/audio_effects.conf:system/etc/audio_effects.conf
+    device/moto/shamu/audio_effects.conf:system/etc/audio_effects.conf \
+    device/moto/shamu/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/moto/shamu/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/moto/shamu/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    device/moto/shamu/audio_policy_volumes_drc.xml:system/etc/audio_policy_volumes_drc.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:system/etc/default_volume_tables.xml \
 
 PRODUCT_COPY_FILES += \
     device/moto/shamu/media_profiles.xml:system/etc/media_profiles.xml \
     device/moto/shamu/media_codecs.xml:system/etc/media_codecs.xml \
     device/moto/shamu/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
-
-PRODUCT_COPY_FILES += \
-    device/moto/shamu/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/moto/shamu/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -180,6 +183,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.media.treble_omx=false
 
+USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_PACKAGES += \
     audio.primary.msm8084 \
     audio.a2dp.default \
