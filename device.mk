@@ -252,7 +252,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     fmas.spkr_2ch=35,25 \
     fmas.spkr_angles=10 \
     fmas.spkr_sgain=0 \
-    media.aac_51_output_enabled=true \
+    media.aac_51_output_enabled=true
 
 #Disable QC Oem Hook
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -386,4 +386,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     sys.usb.config=mtp,adb \
     persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0 \
+    ro.adb.secure=0
