@@ -376,4 +376,12 @@
     <integer name="config_bluetooth_rx_cur_ma">17</integer>
     <integer name="config_bluetooth_tx_cur_ma">46</integer>
     <integer name="config_bluetooth_operating_voltage_mv">3500</integer>
+
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm/boot-framework.oat"</item>
+        <item>"/system/framework/oat/arm/services.odex"</item>
+        <item>"/system/framework/arm/boot.oat"</item>
+        <item>"/system/framework/arm/boot-core-libart.oat"</item>
+    </string-array>
 </resources>
