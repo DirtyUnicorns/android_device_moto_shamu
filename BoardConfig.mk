@@ -135,4 +135,4 @@ DONT_DEXPREOPT_PREBUILTS := true
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
 
--include vendor/moto/shamu/BoardConfigVendor.mk
+# -include vendor/motorola/shamu/BoardConfigVendor.mk
