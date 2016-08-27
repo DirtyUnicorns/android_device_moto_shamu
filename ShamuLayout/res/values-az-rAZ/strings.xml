@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,11 +12,12 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
+ -->
 
-<!-- Telecomm resources that may need to be customized
-     for different hardware or product builds. -->
-<resources>
-    <!-- Flag indicating if the tty is enabled -->
-    <bool name="tty_enabled">true</bool>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="4827444239162090155">"Nexus 6 Əsas Ekran"</string>
+    <string name="google_folder_title" msgid="3050712152111669078">"Google"</string>
+    <string name="create_folder_title" msgid="1626185277541881691">"Yaradın"</string>
+    <string name="play_folder_title" msgid="8796147714003891112">"Play"</string>
 </resources>

@@ -30,7 +30,7 @@ BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=shamu msm_rtb.filter=0x37 ehci-hcd.park=3 utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags utags.backup=/dev/block/platform/msm_sdcc.1/by-name/utagsBackup coherent_pool=8M
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=shamu msm_rtb.filter=0x37 ehci-hcd.park=3 utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags utags.backup=/dev/block/platform/msm_sdcc.1/by-name/utagsBackup coherent_pool=8M vmalloc=300M
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
@@ -81,20 +81,9 @@ TARGET_NO_RPC := true
 TARGET_BOARD_INFO_FILE := device/moto/shamu/board-info.txt
 
 USE_OPENGL_RENDERER := true
-VSYNC_EVENT_PHASE_OFFSET_NS := 2500000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 0000000
 TARGET_USES_ION := true
 TARGET_HW_DISK_ENCRYPTION := false
 TARGET_CRYPTFS_HW_PATH := device/moto/shamu/cryptfs_hw
-
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
 
 TARGET_TOUCHBOOST_FREQUENCY := 1500
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -137,6 +126,11 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
+
+USE_CLANG_PLATFORM_BUILD := true
+
+# Disable dex-preopt of prebuilts to save space.
+DONT_DEXPREOPT_PREBUILTS := true
 
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
