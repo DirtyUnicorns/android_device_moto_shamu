@@ -158,7 +158,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.rec_timeout=2500 \
     ro.facelock.lively_timeout=2500 \
     ro.facelock.est_max_time=600 \
-    ro.facelock.use_intro_anim=false
+    ro.facelock.use_intro_anim=false \
+    media.aac_51_output_enabled=true \
 
 # Audio effects
 PRODUCT_PACKAGES += \
