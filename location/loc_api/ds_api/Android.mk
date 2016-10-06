@@ -14,6 +14,7 @@ LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_SHARED_LIBRARIES := \
     libutils \
+    liblog \
     libcutils \
     libqmi_cci \
     libqmi_csi \
