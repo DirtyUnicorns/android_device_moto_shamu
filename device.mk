@@ -437,6 +437,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     power.shamu \
+    android.hardware.power@1.0-impl \
     thermal.shamu \
     android.hardware.thermal@1.0-impl
 
