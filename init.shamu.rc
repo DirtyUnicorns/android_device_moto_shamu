@@ -244,6 +244,9 @@ on property:persist.sys.qc.sub.rdump.on=*
     chown radio radio /sys/devices/cycapsense_prog.1/cycapsense_fw
     chmod 0220 /sys/devices/cycapsense_prog.1/cycapsense_fw
 
+# Wifi firmware reload path
+    chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
+
 # msm specific files that need to be created on /data
 on post-fs-data
     # Create the directories used by the Wireless subsystem
