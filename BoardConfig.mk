@@ -19,10 +19,16 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
+
+# Build kernel inline
+TARGET_KERNEL_SOURCE := kernel/moto/shamu
+TARGET_KERNEL_CONFIG := shamu_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
@@ -125,4 +131,7 @@ USE_CLANG_PLATFORM_BUILD := true
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
--include vendor/moto/shamu/BoardConfigVendor.mk
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
+
+#-include vendor/moto/shamu/BoardConfigVendor.mk
