@@ -22,7 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
-$(call inherit-product, vendor/du/config/nfc_enhanced.mk)
 
 PRODUCT_NAME := du_shamu
 PRODUCT_DEVICE := shamu
