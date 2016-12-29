@@ -130,8 +130,6 @@ BOARD_HAS_AUDIO_DSP := true
 
 USE_DEVICE_SPECIFIC_CAMERA:= true
 
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
-
 USE_CLANG_PLATFORM_BUILD := true
 
 # Disable dex-preopt of prebuilts to save space.
