@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8084 \
     android.hardware.graphics.composer@2.1-impl \
     memtrack.msm8084 \
+    android.hardware.memtrack@1.0-impl \
     libqdutils \
     libqdMetaData
 
