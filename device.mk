@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += atmel.fw.apq8084
 PRODUCT_PACKAGES += \
     qmi_motext_hook
 
+# Wifi HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # RIL
 PRODUCT_PACKAGES += \
     libxml2
