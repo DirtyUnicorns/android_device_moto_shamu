@@ -153,13 +153,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true \
     drm.service.enabled=true \
-    ro.facelock.black_timeout=400 \
-    ro.facelock.det_timeout=1500 \
-    ro.facelock.rec_timeout=2500 \
-    ro.facelock.lively_timeout=2500 \
+    ro.facelock.black_timeout=700 \
+    ro.facelock.det_timeout=2500 \
+    ro.facelock.rec_timeout=3500 \
     ro.facelock.est_max_time=600 \
-    ro.facelock.use_intro_anim=false \
-    media.aac_51_output_enabled=true \
+    media.aac_51_output_enabled=true
 
 # Audio effects
 PRODUCT_PACKAGES += \
@@ -171,7 +169,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     fmas.spkr_6ch=35,20,110 \
     fmas.spkr_2ch=35,25 \
     fmas.spkr_angles=10 \
-    fmas.spkr_sgain=0 \
+    fmas.spkr_sgain=0
 
 PRODUCT_PACKAGES += \
     libqomx_core \
