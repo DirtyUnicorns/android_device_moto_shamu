@@ -440,3 +440,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # miracast props
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1﻿
+
+# Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
