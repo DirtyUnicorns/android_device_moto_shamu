@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
     hwcomposer.msm8084 \
+    android.hardware.graphics.composer@2.1-impl \
     memtrack.msm8084 \
     libqdutils \
     libqdMetaData
