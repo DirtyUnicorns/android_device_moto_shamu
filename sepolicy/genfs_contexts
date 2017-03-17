@@ -4,3 +4,4 @@ genfscon proc /bluetooth/sleep/btwrite u:object_r:proc_bluetooth_writable:s0
 
 # sysfs
 genfscon sysfs /devices/soc0           u:object_r:sysfs_socinfo:s0
+genfscon debugfs /kgsl/proc            u:object_r:debugfs_kgsl:s0
