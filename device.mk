@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libOmxVenc
 
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
+
 PRODUCT_PACKAGES += \
     audio.primary.msm8084 \
     audio.a2dp.default \
