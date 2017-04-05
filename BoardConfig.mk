@@ -137,4 +137,6 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 TARGET_FS_CONFIG_GEN += device/moto/shamu/config.fs
 
+DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
+
 -include vendor/moto/shamu/BoardConfigVendor.mk
