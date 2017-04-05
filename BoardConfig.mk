@@ -129,6 +129,8 @@ USE_DEVICE_SPECIFIC_CAMERA:= true
 
 USE_CLANG_PLATFORM_BUILD := true
 
+DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
+
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
