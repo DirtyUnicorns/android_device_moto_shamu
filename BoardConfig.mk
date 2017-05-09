@@ -137,6 +137,9 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 
 USE_CLANG_PLATFORM_BUILD := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Qualcomm Time Services
 BOARD_USES_QC_TIME_SERVICES := true
 
