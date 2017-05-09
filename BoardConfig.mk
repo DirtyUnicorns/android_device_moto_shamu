@@ -131,6 +131,8 @@ USE_CLANG_PLATFORM_BUILD := true
 
 DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
 
+DEVICE_MATRIX_FILE := device/moto/shamu/compatibility_matrix.xml
+
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
