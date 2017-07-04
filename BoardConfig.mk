@@ -130,8 +130,6 @@ BOARD_HAS_AUDIO_DSP := true
 
 USE_DEVICE_SPECIFIC_CAMERA:= true
 
-USE_CLANG_PLATFORM_BUILD := true
-
 DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
 
 DEVICE_MATRIX_FILE := device/moto/shamu/compatibility_matrix.xml
