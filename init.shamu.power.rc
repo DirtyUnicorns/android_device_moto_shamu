@@ -84,4 +84,4 @@ on property:dev.bootcomplete=1
     write /sys/module/cpu_boost/parameters/input_boost_freq 1728000
     write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 75000
     write /sys/module/cpu_boost/parameters/input_boost_ms 150
-    write /dev/cpuctl/apps/cpu.notify_on_migrate 0
+    write /dev/cpuctl/cpu.notify_on_migrate 0
