@@ -2,4 +2,5 @@ subdirs = [
     "light",
     "thermal",
     "vibrator",
+    "usb",
 ]
