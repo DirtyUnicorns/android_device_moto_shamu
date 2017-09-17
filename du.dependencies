@@ -1,0 +1,13 @@
+
+[
+ {
+   "repository":  "DirtyUnicorns/android_kernel_moto_shamu",
+   "target_path": "kernel/moto/shamu",
+   "branch":      "p9x"
+ },
+ {
+   "repository":  "DirtyUnicorns/android_vendor_motorola",
+   "target_path": "vendor/motorola",
+   "branch":      "p9x"
+ }
+]
