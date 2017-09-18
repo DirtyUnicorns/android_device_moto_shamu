@@ -141,6 +141,9 @@ USE_DEVICE_SPECIFIC_CAMERA:= true
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Recovery
+LZMA_RAMDISK_TARGETS := recovery
+
 TARGET_FS_CONFIG_GEN += device/moto/shamu/config.fs
 
 DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
