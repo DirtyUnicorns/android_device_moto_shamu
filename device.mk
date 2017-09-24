@@ -188,9 +188,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
-PRODUCT_PACKAGES += \
-    lights.shamu \
-
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
