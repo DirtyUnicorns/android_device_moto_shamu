@@ -153,16 +153,16 @@ PRODUCT_PACKAGES += \
     librs_jni
 
 PRODUCT_PACKAGES += \
-    gralloc.msm8084 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl \
-    hwcomposer.msm8084 \
     android.hardware.graphics.composer@2.1-impl \
-    memtrack.msm8084 \
+    android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
+    gralloc.msm8084 \
+    hwcomposer.msm8084 \
     libqdutils \
-    libqdMetaData
+    libqdMetaData \
+    memtrack.msm8084
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
