@@ -131,18 +131,9 @@ PRODUCT_PACKAGES += atmel.fw.apq8084
 PRODUCT_PACKAGES += \
     qmi_motext_hook
 
-# Wifi HAL
+# Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
-
-# Dumpstate HAL
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.0-service.shamu
-
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-    libbt-vendor \
-    android.hardware.bluetooth@1.0-impl
+    libbt-vendor
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -156,23 +147,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     gralloc.msm8084 \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl \
     hwcomposer.msm8084 \
-    android.hardware.graphics.composer@2.1-impl \
     memtrack.msm8084 \
-    android.hardware.memtrack@1.0-impl \
     libqdutils \
     libqdMetaData
-
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
-# Sensor HAL
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl
 
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -191,10 +169,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
-PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl
-
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
     persist.audio.dualmic.config=endfire \
@@ -202,14 +176,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=false \
     ro.audio.monitorRotation=true
-
-# Keymaster HAL
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
-
-# DRM HAL
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl
 
 # drmservice props
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -232,8 +198,6 @@ PRODUCT_PACKAGES += \
 
 #CAMERA
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.2-impl \
-    android.hardware.camera.provider@2.4-impl \
     libqomx_core \
     libmm-qcamera \
     libmmcamera_interface \
@@ -247,7 +211,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     lights.shamu \
-    android.hardware.light@2.0-impl
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -362,16 +325,13 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
     gps.msm8084
 
 # NFC packages
 PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
     NfcNci \
-    Tag \
-    android.hardware.nfc@1.0-impl-bcm \
-    android.hardware.nfc@1.0-service
+    Tag
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
@@ -414,15 +374,9 @@ $(call inherit-product, build/target/product/verity.mk)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.qualcomm.perf.cores_online=2
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
-
 PRODUCT_PACKAGES += \
     power.shamu \
-    android.hardware.power@1.0-impl \
-    thermal.shamu \
-    android.hardware.thermal@1.0-impl
+    thermal.shamu
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -470,3 +424,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # ro.product.first_api_level indicates the first api level the device has commercially launched on.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21
+
+# Treble packages
+$(call inherit-product, device/moto/shamu/treble.mk)
