@@ -37,12 +37,14 @@ PRODUCT_COPY_FILES += \
     device/moto/shamu/apq8084-taiko-tfa9890_stereo_co_Button_Jack.kl:system/usr/keylayout/apq8084-taiko-tfa9890_stereo_co_Button_Jack.kl \
 	device/moto/shamu/atmel_mxt_ts.idc:system/usr/idc/atmel_mxt_ts.idc
 
+# Audio
 PRODUCT_COPY_FILES += \
-    device/moto/shamu/audio_effects.conf:system/etc/audio_effects.conf \
-    device/moto/shamu/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/moto/shamu/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    device/moto/shamu/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-    device/moto/shamu/audio_policy_volumes_drc.xml:system/etc/audio_policy_volumes_drc.xml \
+    device/moto/shamu/audio/audio_effects.conf:system/etc/audio_effects.conf \
+    device/moto/shamu/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/moto/shamu/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    device/moto/shamu/audio/audio_policy_volumes_drc.xml:system/etc/audio_policy_volumes_drc.xml \
+    device/moto/shamu/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/moto/shamu/audio/motvr_audio_policy_configuration.xml:system/etc/motvr_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
