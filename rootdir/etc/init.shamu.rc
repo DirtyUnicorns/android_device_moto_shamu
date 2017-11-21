@@ -191,10 +191,6 @@ on zygote-start
 
     mkdir /data/audio/ 0770 media audio
 
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-
     # Audio DSP permissions
     mkdir /data/adspd 0770 media media
     mkdir /data/adspd/1 0770 media media
