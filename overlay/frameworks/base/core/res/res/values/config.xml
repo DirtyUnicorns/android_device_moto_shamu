@@ -283,7 +283,7 @@
          provisioning, availability etc -->
     <bool name="config_carrier_vt_available">true</bool>
 
-    <!-- Flag specifying whether WFC over IMS is availasble on device -->
+    <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
 
     <!-- Flag specifying that this device will NOT use the "allow_hold_in_ims_call" carrier config
