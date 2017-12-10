@@ -4,6 +4,8 @@ allow system_app atfwd_service:service_manager add;
 
 allow system_app cne_service:service_manager add;
 
+allow system_app selinuxfs:file r_file_perms;
+
 userdebug_or_eng(`
   #qxdmlogger access to /data/diag_logs.
   allow system_app diag_logs:dir rw_dir_perms;
