@@ -486,8 +486,8 @@ service thermal-engine /system/bin/thermal-engine
 
 service time_daemon /system/bin/time_daemon
    class late_start
-   user root
-   group root
+   user system
+   group net_raw
 
 on property:init.svc.bootanim=stopped
     start usf-post-boot
