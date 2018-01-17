@@ -1,5 +1,5 @@
 type gsiffd, domain, device_domain_deprecated;
-type gsiffd_exec, exec_type, file_type;
+type gsiffd_exec, exec_type, vendor_file_type, file_type;
 
 # Started by init
 init_daemon_domain(gsiffd)
