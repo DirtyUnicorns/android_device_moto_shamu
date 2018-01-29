@@ -169,27 +169,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true \
-    persist.audio.dualmic.config=endfire \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker=false \
-    ro.audio.monitorRotation=true
-
-# drmservice props
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
-
-# facelock props
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.facelock.black_timeout=400 \
-    ro.facelock.det_timeout=1500 \
-    ro.facelock.rec_timeout=2500 \
-    ro.facelock.lively_timeout=2500 \
-    ro.facelock.est_max_time=600 \
-    ro.facelock.use_intro_anim=false
-
 # Audio effects
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
@@ -230,94 +209,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8084
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.hwc.mdpcomp.enable=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.no_wait_for_card=1 \
-    persist.radio.data_no_toggle=1 \
-    persist.radio.sib16_support=1 \
-    persist.data.qmi.adb_logmask=0 \
-    persist.radio.alt_mbn_name=tmo_alt.mbn \
-    ro.com.android.prov_mobiledata=false
-
 # never dexopt the MotoSignature
 $(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
-
-# WiFi calling
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.iwlan.enable=true \
-    persist.radio.ignore_ims_wlan=1 \
-    persist.radio.data_con_rprt=1
-
-# Rich Communications Service is disabled in 5.1
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0
-
-# Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.enable_timeout_ms=12000
-
-#Reduce IMS logging
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.ims.disableDebugLogs=1 \
-    persist.ims.disableADBLogs=2 \
-    persist.ims.disableDebugLogs=0 \
-    persist.ims.disableQXDMLogs=0 \
-    persist.ims.disableIMSLogs=1 \
-    persist.camera.hal.debug.mask=7 \
-    persist.camera.ISP.debug.mask=0 \
-    persist.camera.pproc.debug.mask=7 \
-    persist.camera.stats.debug.mask=0 \
-    persist.camera.imglib.logs=1 \
-    persist.camera.mct.debug.mask=1 \
-    persist.camera.sensor.debug=0 \
-    vidc.debug.level=1
-
-#Disable QC Oem Hook
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.oem_socket=false
-
-#Support for graceful UICC Vltg supply deact
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.qcril_uim_vcc_feature=1
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_cdma_sub=0
-
-# LTE, CDMA, GSM/WCDMA
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_network=10 \
-    telephony.lteOnCdmaDevice=1
-
-# SIM based FSG loading & MCFG activation
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.fsg_reload_on=1 \
-    persist.radio.mcfg_enabled=1
-
-# Allow tethering without provisioning app
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
-
-# Camera configuration
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    camera.disable_zsl_mode=0
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=1
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.camera.ois.disable=0
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
@@ -370,10 +263,6 @@ $(call inherit-product-if-exists, vendor/qcom/gpu/msm8x84/msm8x84-gpu-vendor.mk)
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
 
-# setup scheduler tunable
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.perf.cores_online=2
-
 PRODUCT_PACKAGES += \
     power.shamu \
     thermal.shamu
@@ -381,9 +270,6 @@ PRODUCT_PACKAGES += \
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
    fs_config_files
-
-PRODUCT_PROPERTY_OVERRIDES += \
-   ro.frp.pst=/dev/block/platform/msm_sdcc.1/by-name/frp
 
 # Delegation for OEM customization
 PRODUCT_OEM_PROPERTIES := \
@@ -399,31 +285,21 @@ PRODUCT_OEM_PROPERTIES := \
 PRODUCT_COPY_FILES += \
     device/moto/shamu/qcril.db:system/etc/ril/qcril.db
 
-# Reduce client buffer size for fast audio output tracks
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1
+# Treble packages
+$(call inherit-product, device/moto/shamu/treble.mk)
 
-# Low latency audio buffer size in frames
-PRODUCT_PROPERTY_OVERRIDES += \
-    audio_hal.period_size=192
-
-# Set correct voice call audio property values
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.vc_call_vol_steps=6 \
-    persist.audio.dualmic.config=endfire \
-    ro.qc.sdk.audio.fluencetype=fluence \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicecomm=false \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker=false
+# Properties going into default.prop
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
-# ro.product.first_api_level indicates the first api level the device has commercially launched on.
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=21
+# Camera configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=0 \
+    persist.camera.HAL3.enabled=1 \
+    persist.camera.ois.disable=0
 
-# Treble packages
-$(call inherit-product, device/moto/shamu/treble.mk)
+# Perf
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+   ro.qualcomm.perf.cores_online=2
