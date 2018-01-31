@@ -1,1 +1,1 @@
-allow thermalserviced self:capability { dac_override };
+#allow thermalserviced self:capability { dac_override };

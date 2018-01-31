@@ -34,7 +34,7 @@ allow mpdecision sysfs_socinfo:dir search;
 allow mpdecision sysfs_socinfo:file { read open getattr };
 
 #policies for mpctl and mpctl socket
-allow mpdecision self:capability { chown dac_override fsetid net_admin sys_nice };
+allow mpdecision self:capability { chown fsetid net_admin sys_nice };
 allow mpdecision mpctl_socket:dir rw_dir_perms;
 allow mpdecision mpctl_socket:sock_file create_file_perms;
 
