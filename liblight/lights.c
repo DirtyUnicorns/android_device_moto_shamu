@@ -63,6 +63,9 @@ char const*const BLUE_BLINK_LED_FILE
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
+char const*const LCD_MAX_BRIGHTNESS_FILE
+        = "/sys/class/leds/lcd-backlight/max_brightness";
+
 typedef struct { int red; int green; int blue;} LedIdentifier;
 typedef struct { bool red; bool green; bool blue;} LedIdentifierRGB;
 
