@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -151,7 +152,7 @@ static void process_video_encode_hint(void *metadata)
 
 static void touch_boost()
 {
-    int rc, fd;
+    int rc;
     pid_t client;
     char data[MAX_LENGTH];
     char buf[MAX_LENGTH];
@@ -210,7 +211,7 @@ static void process_low_power_hint(void* data)
     low_power(on);
 }
 
-static void power_set_interactive(__attribute__((unused)) struct power_module *module, int on)
+static void set_interactive(__attribute__((unused)) struct power_module *module, int on)
 {
     if (last_state == -1) {
         last_state = on;
@@ -264,15 +265,13 @@ static int power_open(const hw_module_t* module, const char* name,
     if (strcmp(name, POWER_HARDWARE_MODULE_ID) == 0) {
         power_module_t *dev = (power_module_t *)calloc(1,
                 sizeof(power_module_t));
-
         if (dev) {
             /* Common hw_device_t fields */
             dev->common.tag = HARDWARE_MODULE_TAG;
-            dev->common.module_api_version = POWER_MODULE_API_VERSION_0_2;
+            dev->common.module_api_version = POWER_MODULE_API_VERSION_0_3;
             dev->common.hal_api_version = HARDWARE_HAL_API_VERSION;
-
             dev->init = power_init;
-            dev->setInteractive = power_set_interactive;
+            dev->setInteractive = set_interactive;
             dev->powerHint = power_hint;
 
             *device = (hw_device_t*)dev;
@@ -293,7 +292,7 @@ static struct hw_module_methods_t power_module_methods = {
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
         .tag = HARDWARE_MODULE_TAG,
-        .module_api_version = POWER_MODULE_API_VERSION_0_2,
+        .module_api_version = POWER_MODULE_API_VERSION_0_3,
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = POWER_HARDWARE_MODULE_ID,
         .name = "Shamu Power HAL",
@@ -302,6 +301,6 @@ struct power_module HAL_MODULE_INFO_SYM = {
     },
 
     .init = power_init,
-    .setInteractive = power_set_interactive,
+    .setInteractive = set_interactive,
     .powerHint = power_hint,
 };
