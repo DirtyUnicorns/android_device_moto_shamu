@@ -115,6 +115,12 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.shamu
 
 TARGET_RECOVERY_FSTAB = device/moto/shamu/fstab.shamu
 
+# Power
+TARGET_HAS_LEGACY_POWER_STATS := true
+TARGET_HAS_NO_WIFI_STATS := true
+TARGET_USES_INTERACTION_BOOST := true
+TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/1-004a/tsp"
+
 TARGET_RELEASETOOLS_EXTENSIONS := device/moto/shamu
 
 # Support Native Layer RF cutback
