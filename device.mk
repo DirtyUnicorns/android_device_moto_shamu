@@ -301,6 +301,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.rcs.supported=0
 
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    bluetooth.enable_timeout_ms=12000
+
 #Reduce IMS logging
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ims.disableDebugLogs=1 \
