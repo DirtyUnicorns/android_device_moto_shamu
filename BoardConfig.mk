@@ -71,11 +71,7 @@ WIFI_BUS := PCIE
 
 #Bluetooth defines
 BOARD_HAVE_BLUETOOTH_BCM := true
-ifeq ($(TARGET_PRODUCT),bt_shamu)
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/shamu/bluetooth_extra
-else
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/shamu/bluetooth
-endif
 BOARD_CUSTOM_BT_CONFIG := device/moto/shamu/bluetooth/vnd_shamu.txt
 
 TARGET_NO_RADIOIMAGE := true
@@ -113,7 +109,7 @@ TARGET_USES_MKE2FS := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.shamu
 
-TARGET_RECOVERY_FSTAB = device/moto/shamu/fstab.shamu
+TARGET_RECOVERY_FSTAB = device/moto/shamu/rootdir/etc/fstab.shamu
 
 # Power
 TARGET_HAS_LEGACY_POWER_STATS := true
