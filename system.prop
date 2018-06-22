@@ -83,6 +83,9 @@ telephony.lteOnCdmaDevice=1
 # Tethering
 net.tethering.noprovisioning=true
 
+# UI
+sys.use_fifo_ui=1
+
 # WiFi calling
 persist.data.iwlan.enable=true
 persist.radio.ignore_ims_wlan=1
