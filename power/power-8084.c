@@ -51,6 +51,7 @@
 
 static int first_display_off_hint;
 
+/* fling boost: min 3 CPUs, min 1.1 GHz */
 static int resources_interaction_fling_boost[] = {
     CPUS_ONLINE_MIN_3,
     CPU0_MIN_FREQ_NONTURBO_MAX + 1,
@@ -59,6 +60,7 @@ static int resources_interaction_fling_boost[] = {
     CPU3_MIN_FREQ_NONTURBO_MAX + 1
 };
 
+/* interactive boost: min 2 CPUs, min 1.1 GHz */
 static int resources_interaction_boost[] = {
     CPUS_ONLINE_MIN_2,
     CPU0_MIN_FREQ_NONTURBO_MAX + 1,
