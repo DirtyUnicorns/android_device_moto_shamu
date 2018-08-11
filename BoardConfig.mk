@@ -149,4 +149,5 @@ TARGET_FS_CONFIG_GEN += device/moto/shamu/config.fs
 DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
 DEVICE_MATRIX_FILE := device/moto/shamu/compatibility_matrix.xml
 
--include vendor/moto/shamu/BoardConfigVendor.mk
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
