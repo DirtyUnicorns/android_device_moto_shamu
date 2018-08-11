@@ -20,4 +20,7 @@
 
     <!-- Whether to disable eab provision -->
     <bool name="config_is_eab_provisioned">false</bool>
+
+    <!-- Whether system_update_settings should be shown or not. -->
+    <bool name="config_show_system_update_settings">false</bool>
 </resources>
