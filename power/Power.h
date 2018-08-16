@@ -23,7 +23,6 @@
 #else
 #include <android/hardware/power/1.1/IPower.h>
 #endif
-#include <vendor/lineage/power/1.0/ILineagePower.h>
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <hardware/power.h>
@@ -45,12 +44,10 @@ using ::android::hardware::power::V1_0::IPower;
 #else
 using ::android::hardware::power::V1_1::IPower;
 #endif
-using ::vendor::lineage::power::V1_0::ILineagePower;
-using ::vendor::lineage::power::V1_0::LineageFeature;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
 
-struct Power : public IPower, public ILineagePower {
+struct Power : public IPower {
     // Methods from ::android::hardware::power::V1_0::IPower follow.
 
     Power();
@@ -66,9 +63,6 @@ struct Power : public IPower, public ILineagePower {
     Return<void> getSubsystemLowPowerStats(getSubsystemLowPowerStats_cb _hidl_cb) override;
     Return<void> powerHintAsync(PowerHint hint, int32_t data) override;
 #endif
-
-    // Methods from ::vendor::lineage::power::V1_0::ILineagePower follow.
-    Return<int32_t> getFeature(LineageFeature feature) override;
 
     // Methods from ::android::hidl::base::V1_0::IBase follow.
 
