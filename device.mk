@@ -86,7 +86,7 @@ PRODUCT_COPY_FILES += \
 
 # For GPS
 PRODUCT_COPY_FILES += \
-    device/moto/shamu/sec_config:system/etc/sec_config
+    $(LOCAL_PATH)/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Touch firmware updater
 PRODUCT_COPY_FILES += \
