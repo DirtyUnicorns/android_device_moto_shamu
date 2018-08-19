@@ -1,3 +1,5 @@
 allow platform_app time:unix_stream_socket connectto;
 
 unix_socket_connect(platform_app, adspd, adspd)
+
+allow platform_app proc:file { getattr open read };

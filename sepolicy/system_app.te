@@ -7,3 +7,7 @@ allow system_app cne_service:service_manager add;
 allow system_app selinuxfs:file r_file_perms;
 
 unix_socket_connect(system_app, cnd, cnd)
+
+allow system_app vold:binder call;
+allow system_app wificond:binder call;
+

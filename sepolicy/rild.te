@@ -41,3 +41,39 @@ allow rild radio_data_file:file create_file_perms;
 
 # for /system/bin/qmi_motext_hook
 allow rild system_file:file execute_no_trans;
+
+allow rild init:file { getattr open read };
+allow rild kernel:file { open read getattr };
+allow rild proc:file { open read };
+allow rild hal_cas_default:file { open read getattr };
+allow rild servicemanager:file { getattr open read };
+allow rild ueventd:file { getattr open read };
+allow rild vendor_init:file { getattr open read };
+allow rild adbd:file { open read getattr };
+allow rild hal_configstore_default:file { read getattr open };
+allow rild hwservicemanager:file { getattr open read };
+allow rild logd:file { getattr open read };
+allow rild thermalserviced:file { getattr open read };
+allow rild vndservicemanager:file { getattr open read };
+allow rild hal_drm_default:file { open read getattr };
+allow rild surfaceflinger:file { getattr open read };
+allow rild vold:file { open read getattr };
+allow rild zygote:file { open read getattr };
+allow rild hal_dumpstate_default:file { getattr open read };
+allow rild healthd:file { getattr open read };
+allow rild hal_graphics_allocator_default:file { open read getattr };
+allow rild hal_health_default:file { getattr open read };
+allow rild hal_light_default:file { read getattr open };
+allow rild netd:file { getattr open read };
+allow rild qmux:file { read getattr open };
+allow rild hal_power_default:file { open read getattr };
+allow rild hal_thermal_default:file { getattr open read };
+allow rild hal_usb_default:file { open read getattr };
+allow rild hal_vibrator_default:file { open read getattr };
+allow rild hal_wifi_default:file { getattr open read };
+allow rild tee:file { open read getattr };
+allow rild mdm_helper:file { getattr open read };
+allow rild sensors:file { open read getattr };
+allow rild audioserver:file { getattr open read };
+allow rild lmkd:file { getattr open read };
+

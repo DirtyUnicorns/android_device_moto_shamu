@@ -2,3 +2,12 @@ allow init diag_device:chr_file unlink;
 allow init tmpfs:lnk_file create_file_perms;
 allow init userdata_block_device:blk_file rw_file_perms;
 allow init cache_block_device:blk_file rw_file_perms;
+
+allow init proc:file { getattr open read write };
+allow init sysfs_mmi_touch:file setattr;
+allow init sysfs_thermal:file { open write };
+allow init sysfs_usb:file setattr;
+allow init sysfs_wlan_fwpath:file setattr;
+allow init sysfs_xhci_msm_hsic:file { open write };
+allow init sysfs_devices_system_cpu:file write;
+
