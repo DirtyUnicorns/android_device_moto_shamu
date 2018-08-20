@@ -58,3 +58,5 @@ allow netmgrd netd_socket:sock_file write;
 #Allow access to files associated with netd
 allow netmgrd net_data_file:file r_file_perms;
 allow netmgrd net_data_file:dir r_dir_perms;
+
+allow netmgrd diag_device:chr_file { read write open };

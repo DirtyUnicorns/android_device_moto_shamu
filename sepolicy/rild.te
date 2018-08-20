@@ -77,3 +77,5 @@ allow rild sensors:file { open read getattr };
 allow rild audioserver:file { getattr open read };
 allow rild lmkd:file { getattr open read };
 
+allow rild diag_device:chr_file { read write };
+

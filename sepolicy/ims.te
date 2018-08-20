@@ -60,3 +60,5 @@ allow ims wpa_socket:dir rw_dir_perms;
 allow ims wifi_data_file:dir r_dir_perms;
 
 unix_socket_send(ims, wpa, hal_wifi_supplicant_server)
+
+allow ims diag_device:chr_file { read write open };

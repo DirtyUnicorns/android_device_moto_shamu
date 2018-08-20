@@ -11,3 +11,5 @@ allow cnd self:capability { net_raw setuid setgid };
 
 allow cnd netmgrd:dir search;
 allow cnd netmgrd:file r_file_perms;
+
+allow cnd diag_device:chr_file { read write open };

@@ -16,3 +16,5 @@ allow system_server self:socket ioctl;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 allow system_server unlabeled:file unlink;
 
+allow system_server crash_dump:process getpgid;
+allow system_server diag_device:chr_file { read write };
