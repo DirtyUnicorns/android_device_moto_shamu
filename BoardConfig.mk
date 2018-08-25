@@ -107,7 +107,6 @@ TARGET_USES_MKE2FS := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.shamu
 
 TARGET_RECOVERY_FSTAB = device/moto/shamu/rootdir/etc/fstab.shamu
 

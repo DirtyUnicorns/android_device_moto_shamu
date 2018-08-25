@@ -14,16 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+#define LOG_TAG "android.hardware.health@2.0-service.shamu"
 
 #include <healthd/healthd.h>
+#include <health2/service.h>
 
-void healthd_board_init(struct healthd_config*)
-{
-    // use defaults
+void healthd_board_init(struct healthd_config*) {
 }
 
-int healthd_board_battery_update(struct android::BatteryProperties*)
-{
+int healthd_board_battery_update(struct android::BatteryProperties*) {
     // return 0 to log periodic polled battery status to kernel log
     return 1;
+}
+
+int main() {
+    return health_service_main();
 }
