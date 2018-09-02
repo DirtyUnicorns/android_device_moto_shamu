@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/moto/shamu/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/moto/shamu/apq8084-taiko-tfa9890_stereo_co_Button_Jack.kl:system/usr/keylayout/apq8084-taiko-tfa9890_stereo_co_Button_Jack.kl \
-	device/moto/shamu/atmel_mxt_ts.idc:system/usr/idc/atmel_mxt_ts.idc
+    device/moto/shamu/atmel_mxt_ts.idc:system/usr/idc/atmel_mxt_ts.idc
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -140,11 +140,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapersPicker \
-    librs_jni
-
 PRODUCT_PACKAGES += \
     gralloc.msm8084 \
     hwcomposer.msm8084 \
@@ -192,10 +187,6 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
-
-# for off charging mode
-PRODUCT_PACKAGES += \
-    charger_res_images
 
 # for launcher layout
 PRODUCT_PACKAGES += \
