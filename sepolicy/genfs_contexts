@@ -6,6 +6,8 @@ genfscon debugfs /system_stats                        u:object_r:debugfs_rpm:s0
 # proc
 genfscon proc /bluetooth/sleep/btwrite                                              u:object_r:proc_bluetooth_writable:s0
 genfscon proc /bluetooth/sleep/lpm                                                  u:object_r:proc_bluetooth_writable:s0
+genfscon proc /cpu/alignment                                                        u:object_r:proc_cpu_alignment:s0
+genfscon proc /slabinfo                                                             u:object_r:proc_slabinfo:s0
 
 # sysfs
 genfscon sysfs /bus/platform/drivers/xhci_msm_hsic                                  u:object_r:sysfs_xhci_msm_hsic:s0
@@ -30,10 +32,17 @@ genfscon sysfs /devices/leds-qpnp-12/leds/green/brightness                      
 genfscon sysfs /devices/leds-qpnp-13/leds/blue/brightness                           u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/mmi_sar_ctrl.84/sar_wifi                                    u:object_r:sysfs_sar_wifi:s0
 genfscon sysfs /devices/msm_hsic_host/host_ready                                    u:object_r:sysfs_msm_hsic_host_rdy:s0
+genfscon sysfs /devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/iosched/slice_idle u:object_r:sysfs_block_iosched:s0
+genfscon sysfs /devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue      u:object_r:sysfs_block_iosched:s0
+genfscon sysfs /devices/msm_sdcc.1/polling                                          u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/soc0                                                        u:object_r:sysfs_socinfo:s0
 genfscon sysfs /devices/virtual/android_usb/android0/f_rmnet_smd_sdio/transport     u:object_r:sysfs_rmnet:s0
+genfscon sysfs /devices/virtual/bdi/179:0/read_ahead_kb                             u:object_r:sysfs_block_read_ahead_kb:s0
 genfscon sysfs /devices/virtual/net/wlan0/address                                   u:object_r:sysfs_mac_address:s0
 genfscon sysfs /devices/virtual/thermal                                             u:object_r:sysfs_thermal:s0
+genfscon sysfs /kernel/boot_adsp/boot                                               u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /module/bcmdhd/parameters/firmware_path                              u:object_r:sysfs_wlan_fwpath:s0
 genfscon sysfs /module/cpu_boost/parameters                                         u:object_r:sysfs_cpuboost:s0
 genfscon sysfs /module/msm_thermal                                                  u:object_r:sysfs_thermal:s0
+genfscon sysfs /module/rmnet_usb/parameters                                         u:object_r:sysfs_net:s0
+genfscon sysfs /module/lpm_levels/enable_low_power/l2                               u:object_r:sysfs_msm_subsys:s0

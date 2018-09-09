@@ -37,7 +37,10 @@ type persist_modem_file, file_type;
 type persist_hiddenmenu_file, file_type;
 
 #Define the files written during the operation of mpdecision
+type sysfs_block_iosched, fs_type, sysfs_type;
+type sysfs_block_read_ahead_kb, fs_type, sysfs_type;
 type sysfs_mpdecision, fs_type, sysfs_type;
+type sysfs_msm_subsys, fs_type, sysfs_type;
 type sysfs_rqstats, fs_type, sysfs_type;
 type sysfs_cpu_online, fs_type, sysfs_type;
 type sysfs_cpuboost, fs_type, sysfs_type;
@@ -49,3 +52,6 @@ type mpctl_data_file, file_type, data_file_type, core_data_file_type;
 type sysfs_kgsl_gpuclk, fs_type, sysfs_type;
 type debugfs_rpm, debugfs_type, fs_type;
 type sysfs_socinfo, sysfs_type, fs_type, mlstrustedobject;
+
+type proc_cpu_alignment, fs_type, proc_type;
+type proc_slabinfo, fs_type, proc_type;
