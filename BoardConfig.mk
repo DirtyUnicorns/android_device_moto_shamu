@@ -121,8 +121,6 @@ BOARD_USES_CUTBACK_IN_RILD := true
 
 BOARD_SEPOLICY_DIRS += device/moto/shamu/sepolicy
 
-HAVE_ADRENO_SOURCE:= false
-
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
