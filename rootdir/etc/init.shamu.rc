@@ -83,6 +83,9 @@ on post-fs
     # Start devices by sysfs trigger
     start devstart_sh
 
+    # make the selinux kernel policy world-readable
+    chmod 0444 /sys/fs/selinux/policy
+
 on post-fs-data
     # boot time fs tune
     write /sys/block/mmcblk0/queue/iostats 0
