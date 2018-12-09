@@ -19,3 +19,4 @@ allow audioserver audio_cutback_data_file:sock_file write;
 r_dir_file(audioserver, sysfs)
 # connect to rild for phone calls
 allow audioserver rild:unix_stream_socket connectto;
+allow audioserver hal_power_hwservice:hwservice_manager find;
