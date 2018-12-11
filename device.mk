@@ -243,7 +243,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
    dalvik.vm.heapgrowthlimit=256m \
-   dalvik.vm.heapminfree=2m 
+   dalvik.vm.heapminfree=2m
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -264,10 +264,6 @@ PRODUCT_OEM_PROPERTIES := \
     ro.config.wallpaper_component \
     ro.oem.* \
     oem.*
-
-# Copy the qcril.db file from qcril to system. Useful to get the radio tech family for the camped operator
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/qcril.db:system/etc/ril/qcril.db
 
 # Treble packages
 $(call inherit-product, $(LOCAL_PATH)/treble.mk)
