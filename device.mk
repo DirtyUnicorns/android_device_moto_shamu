@@ -164,10 +164,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/nfc/libnfc-nci-20795a10.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci-20795a10.conf
 
-# Power
-PRODUCT_PACKAGES += \
-    power.shamu
-
 # Ramdisk
  PRODUCT_PACKAGES += \
     fstab.shamu \
