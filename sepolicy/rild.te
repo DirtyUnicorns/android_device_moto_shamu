@@ -80,5 +80,7 @@ allow rild sensors:file { open read getattr };
 allow rild audioserver:file { getattr open read };
 allow rild lmkd:file { getattr open read };
 
-allow rild diag_device:chr_file { open read write };
-
+userdebug_or_eng(`
+  allow rild diag_device:chr_file rw_file_perms;
+')
+dontaudit rild diag_device:chr_file rw_file_perms;
