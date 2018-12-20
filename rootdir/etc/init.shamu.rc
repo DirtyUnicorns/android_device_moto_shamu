@@ -25,6 +25,10 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
+    # We are mounting system(/vendor) early
+    # vold needs keymaster that needs qseecomd
+    start qseecomd
+
     mkdir /oem 0550 root root
 
     start servicemanager
