@@ -111,6 +111,11 @@
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">680</integer>
 
+    <!-- Default value for led color when battery is medium and full charged
+         We set full charged to blue and medium is green as low is already red  -->
+    <integer name="config_notificationsBatteryMediumARGB">0xFF00FF00</integer>
+    <integer name="config_notificationsBatteryFullARGB">0xFF0000FF</integer>
+
     <!-- Default color for notification LED is white. -->
     <color name="config_defaultNotificationColor">#ffffffff</color>
 
