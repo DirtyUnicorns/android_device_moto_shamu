@@ -27,6 +27,10 @@ on early-init
 on init
     mkdir /oem 0550 root root
 
+    start servicemanager
+    start hwservicemanager
+    start vndservicemanager
+
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
@@ -62,17 +66,11 @@ on fs
     setprop persist.data.df.agg.dl_pkt 10
     setprop persist.data.df.agg.dl_size 4096
 
-    # Start HW service manager early
-    start hwservicemanager
-
 on late-fs
     # Start services for bootanim
-    start servicemanager
     start surfaceflinger
     start bootanim
 
-    # Make sure HW service manager started and start required HAL services
-    wait_for_prop hwservicemanager.ready true
     start vendor.configstore-hal
     start vendor.gralloc-2-0
 
