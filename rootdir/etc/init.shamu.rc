@@ -94,6 +94,10 @@ on post-fs-data
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
     write /sys/block/dm-0/queue/read_ahead_kb 2048
 
+# zygote need to be started after otapreopt which will be done on post-fs-data
+# start zygote on the next action after post-fs-data which is load_persist_props_action
+on load_persist_props_action
+    start zygote
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
@@ -200,11 +204,6 @@ on post-fs-data
 
     # keep that at the end of on post-fs-data
     setprop vold.post_fs_data_done 1
-
-# zygote need to be started after otapreopt which will be done on post-fs-data
-# start zygote on the next action after post-fs-data which is load_persist_props_action
-on load_persist_props_action
-    start zygote
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
