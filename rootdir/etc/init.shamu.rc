@@ -95,8 +95,7 @@ on post-fs-data
     write /sys/block/dm-0/queue/read_ahead_kb 2048
 
 # zygote need to be started after otapreopt which will be done on post-fs-data
-# start zygote on the next action after post-fs-data which is load_persist_props_action
-on load_persist_props_action
+on zygote-start
     start zygote
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
