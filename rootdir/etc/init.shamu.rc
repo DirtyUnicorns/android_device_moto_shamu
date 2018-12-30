@@ -517,7 +517,7 @@ service mpdecision /system/bin/mpdecision --avg_comp
 
 service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/vendor/etc/thermal-engine.conf}
    class main
-   user root
+   user system
    group root system diag
    writepid /dev/cpuset/system-background/tasks
 
