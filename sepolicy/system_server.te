@@ -20,6 +20,8 @@ allow system_server unlabeled:file unlink;
 
 allow system_server crash_dump:process getpgid;
 
+allow system_server diag_device:chr_file { ioctl open read write };
+
 userdebug_or_eng(`
   allow system_server diag_device:chr_file rw_file_perms;
 ')

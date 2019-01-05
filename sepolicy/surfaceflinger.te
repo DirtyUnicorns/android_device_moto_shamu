@@ -1,1 +1,2 @@
 allow surfaceflinger sysfs:file rw_file_perms;
+allow surfaceflinger sysfs:dir { open read };
