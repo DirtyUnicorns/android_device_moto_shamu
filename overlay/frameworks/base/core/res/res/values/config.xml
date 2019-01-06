@@ -294,6 +294,9 @@
          states. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
+    <!-- Specifies whether to decouple the auto-suspend state of the device from the display on/off state. -->
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+
     <!-- Specify custom blanking delay of the display -->
     <integer name="config_screen_off_delay">0</integer>
 
