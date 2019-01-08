@@ -32,6 +32,7 @@ allow thermald diag_device:chr_file { open read write };
 r_dir_file(thermald, sysfs_batteryinfo)
 
 allow thermald {
+    sysfs
     sysfs_batteryinfo
     sysfs_kgsl_gpuclk
     sysfs_mpdecision
