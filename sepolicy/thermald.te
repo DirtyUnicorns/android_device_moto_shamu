@@ -15,6 +15,7 @@ allow thermald thermald_socket:sock_file create_file_perms;
 
 allow thermald self:socket create_socket_perms;
 allowxperm thermald self:socket ioctl msm_sock_ipc_ioctls;
+allow thermald self:netlink_kobject_uevent_socket create;
 
 allow thermald {
     shared_log_device
