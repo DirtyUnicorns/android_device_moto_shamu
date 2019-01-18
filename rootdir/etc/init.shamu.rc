@@ -26,14 +26,13 @@ on early-init
 
 on init
     # We are mounting system(/vendor) early
+    start servicemanager
+    start hwservicemanager
+    start vndservicemanager
     # vold needs keymaster that needs qseecomd
     start qseecomd
 
     mkdir /oem 0550 root root
-
-    start servicemanager
-    start hwservicemanager
-    start vndservicemanager
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
@@ -44,8 +43,6 @@ on init
     write /proc/sys/vm/page-cluster 0
 
 on fs
-    # Start HW service manager early
-    start hwservicemanager
     mount_all fstab.shamu --early
 
     # Keeping following partitions outside fstab file. As user may not have
@@ -83,6 +80,7 @@ on late-fs
     # In such case, init won't responce the property_set from hwservicemanager and then
     # cause services for bootanim not running.
     wait_for_prop hwservicemanager.ready true
+
     # Mount RW partitions which need run fsck
     mount_all /fstab.shamu --late
 
