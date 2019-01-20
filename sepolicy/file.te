@@ -10,7 +10,10 @@ type mpdecision_socket, file_type;
 type qmuxd_socket, file_type;
 type sensors_socket, file_type;
 type sysfs_dsp_gpio, fs_type, sysfs_type;
+type sysfs_esoc, fs_type, sysfs_type;
 type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_hwmon, fs_type, sysfs_type;
+
 type thermald_socket, file_type;
 # Socket node needed by ims_data daemon
 type ims_socket, file_type;
@@ -27,6 +30,7 @@ type sysfs_rmnet, fs_type, sysfs_type;
 type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 type sysfs_xhci_msm_hsic, fs_type, sysfs_type;
 type sysfs_msm_hsic_host_rdy, fs_type, sysfs_type;
+type sysfs_qup_i2c, fs_type, sysfs_type;
 type sysfs_mmi_touch, fs_type, sysfs_type;
 
 type persist_file, file_type;
@@ -58,6 +62,7 @@ type sysfs_socinfo, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_ssr_recovery, fs_type, sysfs_type;
 type sysfs_ssr_toggle, fs_type, sysfs_type;
 type sysfs_usb_controller, fs_type, sysfs_type;
+type sysfs_vadc_dev, fs_type, sysfs_type;
 type proc_cpu_alignment, fs_type, proc_type;
 type proc_slabinfo, fs_type, proc_type;
 type proc_bootinfo, fs_type, proc_type;

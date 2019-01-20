@@ -38,3 +38,21 @@ allow thermald {
     sysfs_mpdecision
     sysfs_thermal
 }:file rw_file_perms;
+
+allow thermald {
+    sysfs_batteryinfo
+    sysfs_esoc
+    sysfs_hwmon
+    sysfs_kgsl
+    sysfs_qup_i2c
+    sysfs_thermal
+    sysfs_vadc_dev
+}:dir r_dir_perms;
+
+allow thermald {
+    sysfs_esoc
+    sysfs_hwmon
+    sysfs_kgsl
+    sysfs_qup_i2c
+    sysfs_vadc_dev
+}:file r_file_perms;

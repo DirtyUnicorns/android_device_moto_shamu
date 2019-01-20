@@ -20,8 +20,12 @@ allow adspd sysfs:file write;
 
 allow adspd sysfs_usb:file write;
 
-allow adspd sysfs_mmi_touch:dir search;
+allow adspd sysfs_mmi_touch:dir r_dir_perms;
 allow adspd sysfs_mmi_touch:file r_file_perms;
 
 allow adspd sysfs_dsp_gpio:dir search;
 allow adspd sysfs_dsp_gpio:file rw_file_perms;
+
+#todo
+# adspd reads /sys/devices/virtual/input/input1 properly label it
+allow adspd sysfs:file r_file_perms;

@@ -4,9 +4,10 @@ unix_socket_connect(priv_app, adspd, adspd)
 allow priv_app adspd_data_file:dir r_dir_perms;
 allow priv_app adspd_data_file:file r_file_perms;
 
-allow priv_app device:dir open;
-allow priv_app proc:file { getattr open };
 allow priv_app proc_interrupts:file open;
 allow priv_app sysfs:dir open;
 allow priv_app sysfs:file { read open };
 allow priv_app sysfs_mac_address:file { read open };
+
+allow priv_app device:dir { open read };
+dontaudit priv_app proc_interrupts:file r_file_perms;
