@@ -25,3 +25,5 @@ allow qmux sysfs_esoc:dir r_dir_perms;
 allow qmux sysfs_esoc:file r_file_perms;
 
 allow qmux sysfs_hsic_modem_wait:file w_file_perms;
+
+allow qmux diag_device:chr_file { ioctl open read write };

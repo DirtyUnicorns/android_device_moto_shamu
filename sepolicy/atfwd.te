@@ -19,3 +19,5 @@ set_prop(atfwd, ctl_default_prop)
 
 allow atfwd sysfs_esoc:dir r_dir_perms;
 allow atfwd sysfs_esoc:file r_file_perms;
+
+allow atfwd diag_device:chr_file { ioctl open read write };
