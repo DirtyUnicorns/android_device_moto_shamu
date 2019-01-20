@@ -40,6 +40,7 @@ allow thermald {
 }:file rw_file_perms;
 
 allow thermald {
+    sysfs
     sysfs_batteryinfo
     sysfs_esoc
     sysfs_hwmon
