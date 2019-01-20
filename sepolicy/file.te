@@ -60,3 +60,4 @@ type sysfs_ssr_toggle, fs_type, sysfs_type;
 type sysfs_usb_controller, fs_type, sysfs_type;
 type proc_cpu_alignment, fs_type, proc_type;
 type proc_slabinfo, fs_type, proc_type;
+type proc_bootinfo, fs_type, proc_type;
