@@ -3,6 +3,7 @@ allow init tmpfs:lnk_file create;
 
 allow init {
     proc_cpu_alignment
+    sysfs_cpuboost
     sysfs_block_iosched
     sysfs_block_read_ahead_kb
     sysfs_devices_system_cpu
