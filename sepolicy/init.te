@@ -6,15 +6,23 @@ allow init {
     sysfs_block_iosched
     sysfs_block_read_ahead_kb
     sysfs_devices_system_cpu
+    sysfs_msm_power
     sysfs_mpdecision
     sysfs_msm_subsys
     sysfs_net
+    sysfs_ssr_recovery
+    sysfs_ssr_toggle
     sysfs_thermal
+    sysfs_usb_controller
     sysfs_xhci_msm_hsic
 }:file w_file_perms;
 
 allow init {
     proc_slabinfo
+    sysfs_bluetooth_writable
+    sysfs_dsp_gpio
+    sysfs_graphics
+    sysfs_hsic_modem_wait
     sysfs_mmi_touch
     sysfs_msm_subsys
     sysfs_usb
